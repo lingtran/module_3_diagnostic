@@ -17,7 +17,7 @@ gem 'faraday'
 
 group :test do
   gem 'vcr'
-  gem 'mock'
+  gem 'webmock'
   gem 'simplecov', :require => false
 end
 
