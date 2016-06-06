@@ -1,10 +1,10 @@
 class NrelServices
   def initialize
-    @_connection = Faraday.new(url: "https://api.data.gov/nrel/api/alt-fuel-stations/alt-fuel-stations/v1/")
+    @_connection = Faraday.new(url: "https://developer.nrel.gov/api/alt-fuel-stations/alt-fuel-stations/v1/")
   end
 
   def get_nearest_stations(zipcode)
-    connection.get "nearest.json", { api_key: ENV["nrel_api_key"], zip: "#{zipcode}", radius: 6, fuel_type: "ELEC,LPG" }
+    connection.get "nearest.json", { api_key: ENV["nrel_api_key"], zip: zipcode, radius: 6, fuel_type: "ELEC,LPG" }
   end
 
   def parse_nearest_stations(response)
