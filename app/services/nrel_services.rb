@@ -7,7 +7,7 @@ class NrelServices
     connection.get "nearest.json", { api_key: ENV["nrel_api_key"], zip: zipcode, location: zipcode, radius: 6, fuel_type: "ELEC,LPG" }
   end
 
-  def parse_nearest_stations(response)
+  def parse_nearest_stations(zipcode)
     parse(get_nearest_stations(zipcode))
   end
 
