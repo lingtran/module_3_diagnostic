@@ -11,12 +11,27 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
+gem 'figaro'
+gem 'bcrypt'
+gem 'faraday'
+
+group :test do
+  gem 'vcr'
+  gem 'mock'
+  gem 'simplecov', :require => false
+end
 
 group :development, :test do
-  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'pry'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'capybara'
+  gem 'mocha'
+  gem 'shoulda'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
 end
-
